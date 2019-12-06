@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>889</width>
+    <height>389</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="hlayoutTop1">
+        <item>
+         <layout class="QHBoxLayout" name="hlayoutSrc">
+          <item>
+           <widget class="QLineEdit" name="vidSource">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+            <property name="placeholderText">
+             <string>Source File</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="srcButton">
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>13</width>
+            <height>37</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="hlayoutDst">
+          <item>
+           <widget class="QLineEdit" name="vidDest">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+            <property name="placeholderText">
+             <string>Destination Folder</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="dstButton">
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="startButton">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Start</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="hlayoutTop2">
+        <item>
+         <layout class="QHBoxLayout" name="hlayoutIntervals" stretch="1,0,0,0,0,0">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Segment Size: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="prtHrs">
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::PlusMinus</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="prtMins">
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::PlusMinus</enum>
+            </property>
+            <property name="minimum">
+             <number>5</number>
+            </property>
+            <property name="displayIntegerBase">
+             <number>10</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="prtSecs">
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::PlusMinus</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="hlayoutCRF" stretch="1,0">
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>CRF:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cbCrf">
+            <property name="currentIndex">
+             <number>18</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>4</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>5</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>6</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>7</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>8</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>9</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>10</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>11</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>12</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>13</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>14</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>15</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>16</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>17</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>18</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>19</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>20</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>21</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>22</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>23</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>24</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>25</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>26</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>27</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>28</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>29</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>30</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>31</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>32</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>33</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>34</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>35</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>36</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>37</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>38</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>39</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>40</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>41</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>42</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>43</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>44</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>45</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>46</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>47</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>48</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>49</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>50</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>51</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Audio Codec: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cbAudioCodec">
+          <item>
+           <property name="text">
+            <string>Copy</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>AAC</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="hlayoutCrossfade" stretch="1,0">
+          <item>
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>Crossfade (seconds): </string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="crossfade">
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::PlusMinus</enum>
+            </property>
+            <property name="maximum">
+             <number>60</number>
+            </property>
+            <property name="value">
+             <number>10</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLineEdit" name="customName">
+          <property name="placeholderText">
+           <string>Custom Name</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Overwrite: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="cbOverwrite_corrupt">
+          <property name="text">
+           <string>Corrupt</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="cbOverwrite_diffsize">
+          <property name="text">
+           <string>Different Size</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="cbOverwrite_existing">
+          <property name="text">
+           <string>Existing</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTreeWidget" name="segments">
+        <column>
+         <property name="text">
+          <string>#</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Start</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>End</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Progress</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>State</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>ETA</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="progressBar">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
