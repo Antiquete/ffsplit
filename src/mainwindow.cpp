@@ -217,8 +217,12 @@ void MainWindow::disableInterface()
     ui->prtMins->setEnabled(false);
     ui->prtSecs->setEnabled(false);
     ui->cbCrf->setEnabled(false);
+    ui->cbAudioCodec->setEnabled(false);
     ui->crossfade->setEnabled(false);
     ui->customName->setEnabled(false);
+    ui->cbOverwrite_corrupt->setEnabled(false);
+    ui->cbOverwrite_diffsize->setEnabled(false);
+    ui->cbOverwrite_existing->setEnabled(false);
 }
 void MainWindow::enableInterface()
 {
@@ -228,8 +232,12 @@ void MainWindow::enableInterface()
     ui->prtMins->setEnabled(true);
     ui->prtSecs->setEnabled(true);
     ui->cbCrf->setEnabled(true);
+    ui->cbAudioCodec->setEnabled(true);
     ui->crossfade->setEnabled(true);
     ui->customName->setEnabled(true);
+    ui->cbOverwrite_corrupt->setEnabled(true);
+    ui->cbOverwrite_diffsize->setEnabled(true);
+    ui->cbOverwrite_existing->setEnabled(true);
 }
 void MainWindow::startTranscode()
 {
