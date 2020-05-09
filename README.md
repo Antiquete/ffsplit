@@ -4,6 +4,8 @@
 
 A simple gui video splitter in qt using ffmpeg.
 
+![alt text](docs/screenshots/ffsplit_scr_1.png "")
+
 ### Features
 
 - Split videos into segments
@@ -14,3 +16,25 @@ A simple gui video splitter in qt using ffmpeg.
 
 ## Dependencies
 - FFMpeg
+- Qt
+- qmake (For compiling)
+
+## Build
+
+Compile
+_______
+
+```sh
+git clone https://gitlab.com/Antiquete/ffsplit
+cd ffsplit
+mkdir build && cd build
+qmake ../FFSplit.pro
+make
+```
+
+Run
+___
+
+```sh
+./FFSplit
+```
