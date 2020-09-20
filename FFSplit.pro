@@ -33,3 +33,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     COPYING \
     README.md
+
+RESOURCES += \
+    src/res.qrc
